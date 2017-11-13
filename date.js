@@ -23,7 +23,11 @@
  *  - `gmt` GMT date-time string, case-insensitive;
  *  - `utc` same as `gmt`;
  *  - `iso` ISO8601 date-time string, case-insensitive.
+ *  
+ *  Default value is `Y-m-d H:i:s`.
+ * 
  * @param  {Number}  [timestamp]  Set a specific UNIX timestamp.
+ * 
  * @return {String} 
  */
 function date(format, timestamp) {
@@ -31,7 +35,7 @@ function date(format, timestamp) {
         timestamp = format;
         format = null;
     }
-    var format = format || 'Y-m-d H:i:s Week',
+    var format = format || 'Y-m-d H:i:s',
         _date = new Date();
     if (timestamp) _date.setTime(timestamp);
 
