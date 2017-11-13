@@ -1,6 +1,6 @@
 # SFN-Date
 
-**Simple Formatting Nice Date functions for Node.js.**
+**Simple Formatting Nice Date functions for Node.js and browsers.**
 
 ## Install
 

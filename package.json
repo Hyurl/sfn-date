@@ -1,8 +1,8 @@
 {
     "name": "sfn-date",
     "version": "0.1.0",
-    "description": "Simple Formatting Nice Date functions for Node.js.",
-    "main": "index.js",
+    "description": "Simple Formatting Nice Date functions for Node.js and browsers.",
+    "main": "date.js",
     "scripts": {
         "test": "node test"
     },
