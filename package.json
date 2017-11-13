@@ -4,7 +4,7 @@
     "description": "Simple Formatting Nice Date functions for Node.js.",
     "main": "index.js",
     "scripts": {
-        "test": "npm test"
+        "test": "node test"
     },
     "keywords": [
         "sfn",
