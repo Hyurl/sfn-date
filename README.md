@@ -30,7 +30,7 @@ date.tick("Y-m-d H:i:s.ms", text => {
 
 ## API
 
-- `date([format: string], [timestamp: number])` Gets formatted date-time 
+- `date(format?: string, timestamp?: number)` Gets formatted date-time 
     string.
     - `format` A format representation carries these symbols:
         - `Y` the year with 4 digits;
@@ -59,8 +59,8 @@ date.tick("Y-m-d H:i:s.ms", text => {
 
     - `timestamp` Set a particular UNIX timestamp.
 
-- `date.tick([format: string], callback, [interval: number])` Runs a function 
-    continuously by a specific interval.
+- `date.tick(format?: string, cb: (dateStr: string) => void, interval?: number): void`
+    Runs a function continuously according to a specific interval.
     - `format` is the format as `date()`.
     - `callback` A function called every time reaches the interval, accepts 
         one parameter, which is the current date-time string. If this function
