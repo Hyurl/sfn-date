@@ -1,7 +1,7 @@
 /**
  * Gets formatted date-time string.
  * 
- * @param  {String}  [format]  Could carry these symbols:
+ * @param  {string}  [format]  Could carry these symbols:
  *  - `Y` the year with 4 digits;
  *  - `y` the year with 2 digits;
  *  - `Month` the month in English;
@@ -24,11 +24,11 @@
  *  - `utc` same as `gmt`;
  *  - `iso` ISO8601 date-time string, case-insensitive.
  *  
- *  Default value is `Y-m-d H:i:s`.
+ *  Default format is `Y-m-d H:i:s`.
  * 
- * @param  {Number}  [timestamp]  Set a specific UNIX timestamp.
+ * @param  {number}  [timestamp]  Set a specific UNIX timestamp.
  * 
- * @return {String} 
+ * @return {string} 
  */
 function date(format, timestamp) {
     if (typeof format === "number") {
@@ -40,9 +40,9 @@ function date(format, timestamp) {
     if (timestamp) _date.setTime(timestamp);
 
     var year = [
-            _date.getFullYear(),
-            _date.getFullYear().toString().substr(2)
-        ],
+        _date.getFullYear(),
+        _date.getFullYear().toString().substr(2)
+    ],
         month = [
             ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
             ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'],
@@ -93,13 +93,13 @@ function date(format, timestamp) {
 /**
  * Runs a function continuously by a specific interval.
  * 
- * @param {String} [format] Same format as `date()`.
+ * @param {string} [format] Same format as `date()`.
  * 
  * @param {Function} callback A function called every time reaches the 
  *  interval, accepts one parameter, which is the current date-time string. If
  *  this function returns `false`, then break the time tick.
  * 
- * @param {Number} [interval] Default is `1000`ms.
+ * @param {number} [interval] Default is `1000`ms.
  */
 date.tick = function tick(format, callback, interval) {
     if (typeof format == "function") {
@@ -111,7 +111,7 @@ date.tick = function tick(format, callback, interval) {
     }
     var start = 999 - (new Date).getMilliseconds(),
         timer = null,
-        tick = function() {
+        tick = function () {
             var result = callback(date(format));
             if (result === false)
                 clearInterval(timer);

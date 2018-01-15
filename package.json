@@ -1,8 +1,9 @@
 {
     "name": "sfn-date",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Simple Formatting Nice Date functions for Node.js and browsers.",
     "main": "date.js",
+    "types": "date.d.ts",
     "scripts": {
         "test": "node test"
     },
@@ -13,7 +14,7 @@
     "author": {
         "name": "Ayon Lee",
         "email": "i@hyurl.com",
-        "url": "hyurl.com"
+        "url": "http://hyurl.com"
     },
     "repository": {
         "type": "git",
