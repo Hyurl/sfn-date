@@ -4,6 +4,9 @@
     "description": "Simple Formatting Nice Date functions for Node.js and browsers.",
     "main": "date.js",
     "types": "date.d.ts",
+    "engines": {
+        "node": ">=4.0"
+    },
     "scripts": {
         "test": "node test"
     },
@@ -16,6 +19,7 @@
         "email": "i@hyurl.com",
         "url": "http://hyurl.com"
     },
+    "homepage": "https://github.com/hyurl/sfn-date",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/hyurl/sfn-date.git"
